@@ -18,7 +18,7 @@ export class ServerComponent {               // Export the component: -> Name it
         this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
     }
 
-    getServerStatus() {                       // Define the getServerStatus method, return the serverStatus property defined above
+    getServerStatus() {                       // Define the getServerStatus method, return the serverStatus property defined above (returns a string - we are using it for string interpolation)
         return this.serverStatus;
     }
 

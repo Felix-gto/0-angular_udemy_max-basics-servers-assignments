@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
+  // Data Binding using ngModel - See Databinding assignment
+  username = "";
 }
