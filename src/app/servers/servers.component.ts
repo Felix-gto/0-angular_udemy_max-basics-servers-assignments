@@ -17,7 +17,8 @@ export class ServersComponent implements OnInit {
   // ngIF Directive - Paragraph
   serverCreated = false;
 
-  servers = ['Testserver', 'Testserver 2'];
+  // Create the servers array
+  servers = ['Testserver', 'Testserver 2']; 
 
   // Use setTimeout (normal JavaScript function) to set allowNewServer defined above (export class) to true, after 2 seconds  ->  Enables button after 2 seconds ([disabled]="!allowNewServer") -> disabled = false after 2 secs.
   constructor() { 
@@ -32,7 +33,7 @@ export class ServersComponent implements OnInit {
   // Create the method which will be added as an event -> executed when the event occurs ((click) event added to the button)
   onCreateServer() {
     this.serverCreated = true;
-    this.servers.push(this.serverName);
+    this.servers.push(this.serverName);   // Pushes the serverName into the array when clicking to add a server
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 

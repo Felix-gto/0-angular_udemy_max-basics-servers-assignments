@@ -29,6 +29,8 @@
 
 <!-- ngIf directive -->
 <p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>   <!-- Paragraph shown only once we click to Add Server (onCreateServer() runs on button click)-->
+
+<!-- Without else (ng-template #noServer) the paragraph would only show if serverCreated was true -->
 <ng-template #noServer>
  <p>No server was created!</p>
 </ng-template>

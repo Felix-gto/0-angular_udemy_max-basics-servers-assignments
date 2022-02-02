@@ -1,3 +1,7 @@
-<p [ngStyle]="{backgroundColor: getColor()}"
-[ngClass]="{online: serverStatus === 'online'}">
-{{ 'Server' }} with ID {{ serverID }} is {{ getServerStatus() }} </p>   <!-- {{'Server'}} can be any STRING. You can't write multiline or block expressions (if for control structures etc.). You can use ternary expressions-->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
+  {{ "Server" }} with ID {{ serverID }} is {{ getServerStatus() }}
+</p>
+<!-- {{'Server'}} can be any STRING. You can't write multiline or block expressions (if for control structures etc.). You can use ternary expressions-->
