@@ -23,4 +23,19 @@ export class AppComponent {
 
     this.log.push(new Date());  //Timestamp instead of number (version to display incremented number commented out above)
   }
+
+  
+  // Components and data binding deep dive: Property & Event binding and View encapsulation
+  oddNumbers: number[] =[];
+  evenNumbers: number[] =[];
+
+  onIntervalFired(firedNumber: number) {
+    if (firedNumber % 2 === 0) {
+      this.evenNumbers.push(firedNumber);
+    } else {
+      this.oddNumbers.push(firedNumber);
+    }
+
+  }
+
 }
