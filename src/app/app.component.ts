@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { UserService } from './users.service';
 
@@ -39,6 +40,31 @@ export class AppComponent {
       this.oddNumbers.push(firedNumber);
     }
 
+  }
+
+
+  // Forms (TD) assignment
+
+  @ViewChild('formData', {static:false}) assignmentForm: NgForm;
+
+  defaultSubscription = 'advanced';
+
+  // USER OBJECT which stores the submitted data
+	user = {
+	  email: '',
+	  password: '',
+	  subscription: ''
+  }
+
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+    this.user.email = this.assignmentForm.value.email;
+    this.user.password = this.assignmentForm.value.password;
+    this.user.subscription = this.assignmentForm.value.subscription;
+
+    console.log(this.assignmentForm.value);
   }
 
 }

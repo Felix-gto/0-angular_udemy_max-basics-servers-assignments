@@ -5,3 +5,13 @@ h1 {
 .white-text {
     color: white;
 }
+
+/* Form Assignment */
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+}
